@@ -26,8 +26,9 @@ public class BitonicPoint {
 
     static int binarySearch(int[] arr, int l, int r) {
         if (l > r)
-            return 0;
-        int mid = l + (r - l) / 2;
+            return -1;
+
+        int mid = (l + r) / 2;
 
         if (arr[mid - 1] < arr[mid] && arr[mid + 1] > arr[mid])
             return mid;
