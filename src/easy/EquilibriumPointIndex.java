@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class EquilibriumPoint {
+public class EquilibriumPointIndex {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int tests = Integer.parseInt(br.readLine());
@@ -23,6 +23,7 @@ public class EquilibriumPoint {
     }
 
     static int findEquilibrium(int[] A, int n) {
+
         int sum = 0;
         int leftSum = 0;
         for (int i = 0; i < n; i++) {
