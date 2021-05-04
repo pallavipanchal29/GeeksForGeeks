@@ -1,10 +1,10 @@
-package easy;
+package easy.array;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class WaveArray {
+public class FacingTheSun {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
@@ -15,19 +15,18 @@ public class WaveArray {
             a[j] = Integer.parseInt(input[j]);
         }
 
-        convertToWave(a, n);
-
-        for (int i = 0; i < n; i++) {
-            System.out.print(a[i] + " ");
-        }
-        System.out.println();
+        System.out.println(countBuildings(a, n));
     }
 
-    public static void convertToWave(int[] arr, int n) {
-        for (int i = 0; i < n - 1; i = i + 2) {
-            int temp = arr[i];
-            arr[i] = arr[i + 1];
-            arr[i + 1] = temp;
+    static int countBuildings(int[] h, int n) {
+        int count = 1;
+        int maxSofar = h[0];
+        for (int i = 1; i < n; i++) {
+            if (h[i] >= maxSofar) {
+                maxSofar = h[i];
+                count++;
+            }
         }
+        return count;
     }
 }

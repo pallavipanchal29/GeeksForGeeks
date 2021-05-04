@@ -1,4 +1,4 @@
-package school;
+package school.array;
 
 public class RemainderEvaluation {
 }

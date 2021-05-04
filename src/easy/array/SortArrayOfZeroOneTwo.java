@@ -1,4 +1,4 @@
-package easy;
+package easy.array;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package basic;
+package basic.array;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -40,6 +40,5 @@ public class RotateArray {
             arr[i] = arr[i + 1];
         arr[n - 1] = temp;
     }
-
 
 }

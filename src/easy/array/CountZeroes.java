@@ -1,10 +1,10 @@
-package easy;
+package easy.array;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class FacingTheSun {
+public class CountZeroes {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
@@ -15,17 +15,14 @@ public class FacingTheSun {
             a[j] = Integer.parseInt(input[j]);
         }
 
-        System.out.println(countBuildings(a, n));
+        System.out.println(countZeroes(a, n));
     }
 
-    static int countBuildings(int[] h, int n) {
-        int count = 1;
-        int maxSofar = h[0];
-        for (int i = 1; i < n; i++) {
-            if (h[i] >= maxSofar) {
-                maxSofar = h[i];
+    private static int countZeroes(int[] arr, int n) {
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] == 0)
                 count++;
-            }
         }
         return count;
     }
