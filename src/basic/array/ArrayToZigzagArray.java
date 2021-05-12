@@ -27,7 +27,8 @@ public class ArrayToZigzagArray {
 
         for (int i = 0; i < n - 2; i++) {
             if (flag) {
-                if (arr[i] > arr[i + 1]) {
+                if (arr[i] > arr[i + 1])  //first  number is less than second number
+                {
                     temp = arr[i];
                     arr[i] = arr[i + 1];
                     arr[i + 1] = temp;
