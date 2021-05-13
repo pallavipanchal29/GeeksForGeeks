@@ -12,7 +12,16 @@ public class SumOfNumbersInString {
     }
 
     public static long findSum(String str) {
-        //complete the code
-        return 0L;
+        String temp = "0";
+        int sum = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (Character.isDigit(str.charAt(i)))
+                temp = temp + str.charAt(i);
+            else {
+                sum = sum + Integer.parseInt(temp);
+                temp = "0";
+            }
+        }
+        return sum + Integer.parseInt(temp);
     }
 }
