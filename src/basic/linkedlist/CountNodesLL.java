@@ -29,4 +29,9 @@ public class CountNodesLL {
         }
         return count;
     }
+
+    public static int getCountRecursive(Node head) {
+        if (head == null) return 0;
+        return 1 + getCountRecursive(head.next);
+    }
 }
